@@ -1,8 +1,13 @@
 package com.example.myBoard.controller;
 
 import com.example.myBoard.dto.ArticleDto;
+import com.example.myBoard.entity.Article;
 import com.example.myBoard.repository.ArticleRepository;
 import com.example.myBoard.service.ArticleService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,5 +32,7 @@ public class MainController {
         model.addAttribute("name", "김주성");
         return "articles/show_all";
     }
+
+
 
 }

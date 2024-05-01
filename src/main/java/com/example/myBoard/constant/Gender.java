@@ -1,2 +1,6 @@
-package com.example.myBoard.constant;public enum Gender {
+package com.example.myBoard.constant;
+
+public enum Gender {
+    Male,
+    Female
 }

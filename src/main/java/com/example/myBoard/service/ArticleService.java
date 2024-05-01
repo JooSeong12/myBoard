@@ -3,6 +3,8 @@ package com.example.myBoard.service;
 import com.example.myBoard.dto.ArticleDto;
 import com.example.myBoard.entity.Article;
 import com.example.myBoard.repository.ArticleRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,5 +42,9 @@ public class ArticleService {
         Article article = articleRepository.findById(id).orElse(null);
         ArticleDto dto = ArticleDto.fromArticleEntity(article);
         return dto;
+    }
+
+    public Page<Article> pagingList(Pageable pageable) {
+       return articleRepository.findAll(pageable);
     }
 }

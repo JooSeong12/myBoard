@@ -8,16 +8,19 @@
 <body>
 <div class="content" layout:fragment="content">
         <form th:action="@{/articles/update}" method="post" th:object="${dto}">
-            <div>
-                <label class="form-label">Title</label>
-                <textarea class="form-control" rows="3" th:field="*{title}"></textarea>
-            </div>
-            <div>
-                <label class="form-label">Content</label>
-                <textarea class="form-control" rows="3" th:field="*{content}"></textarea>
-            </div>
-            <input type="hidden" th:field="*{id}">
-            <input type="submit" value="수정">
+
+                <div>
+                    <label class="form-label">Title</label>
+                    <textarea class="form-control" rows="3" th:field="*{title}"></textarea>
+                </div>
+                <div>
+                    <label class="form-label">Content</label>
+                    <textarea class="form-control" rows="3" th:field="*{content}"></textarea>
+                </div>
+                <input type="hidden" th:field="*{id}">
+                <input type="submit" value="수정">
+
+
         </form>
 </div>
 </body>
